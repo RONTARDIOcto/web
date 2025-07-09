@@ -3,9 +3,9 @@ import { Link } from "@tanstack/react-router";
 export default function Header({ className }: { className: string }) {
   return (
     <header className={className}>
-      <Link to="/" className="block container mx-auto flex flex-col gap-2">
+      <Link to="/" className="container mx-auto flex flex-col gap-2">
         <img
-          src="/hero.png"
+          src="/images/hero.png"
           alt="Rontardio Logo"
           className="mx-auto w-32 sm:w-48"
         />
