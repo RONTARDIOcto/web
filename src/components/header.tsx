@@ -1,7 +1,9 @@
+import { Link } from "@tanstack/react-router";
+
 export default function Header({ className }: { className: string }) {
   return (
     <header className={className}>
-      <div className="container mx-auto flex flex-col gap-2">
+      <Link to="/" className="block container mx-auto flex flex-col gap-2">
         <img
           src="/hero.png"
           alt="Rontardio Logo"
@@ -10,7 +12,7 @@ export default function Header({ className }: { className: string }) {
         <h1 className="text-xl sm:text-4xl rainbow-text w-fit mx-auto whitespace-nowrap">
           $rontardio
         </h1>
-      </div>
+      </Link>
     </header>
   );
 }

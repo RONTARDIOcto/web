@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
 function RouteComponent() {
   return (
     <main className="min-h-svh">
-      <div className="container mx-auto py-4 h-svh flex flex-col justify-center gap-6">
+      <div className="container mx-auto py-4 h-svh flex flex-col justify-center-safe gap-6 px-4">
         <Header className="py-10" />
 
         <footer className="flex flex-col gap-4 items-center">
