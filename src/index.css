@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+@theme {
+  --color-black: #0C0C0D;
+  --color-white: #ffffff;
+}
+
+/* press-start-2p-latin-400-normal */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-display: block;
+  font-weight: 400;
+  src: url(@fontsource/press-start-2p/files/press-start-2p-latin-400-normal.woff2) format('woff2'), url(@fontsource/press-start-2p/files/press-start-2p-latin-400-normal.woff) format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+html {
+  font-family: "Press Start 2P", system-ui;
+  height: 100%;
+}
+
+body {
+  @apply bg-black text-white;
+}
+
+.rainbow-text {
+  background-image: linear-gradient(270deg, #F8E1E7, #F4D4D2, #F8C7B9, #E6A398, #D88C8C, #B76868, #8B5E83, #5C4E93, #3B5998, #2E86AB, #2CB1C0, #3CD3AD);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorShift 10s infinite linear;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@keyframes colorShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
